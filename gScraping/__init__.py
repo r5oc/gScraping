@@ -32,12 +32,18 @@ class Scraping(Settings):
 
         self.headers = {"User-Agent": self.dictionary["headers"]}
 
+
     def request(self):
         count = self.dictionary["next-page"]["start"]
 
         while True:
+            
+            try:
+                url = self.url.replace("~~~", str(count))
+            except AttributeError as e:
+                print("\n[Invalid url]")
+                exit()
 
-            url = self.url.replace("~~~", str(count))
             site = requests.get(url, headers=self.headers)
             soup = BeautifulSoup(site.content, 'html.parser')
             products = soup.find_all(self.dictionary["card"]["tag"], self.dictionary["card"]["class"])
@@ -57,6 +63,7 @@ class Scraping(Settings):
                         self.products_dictionary[item].append(product_info)
 
             count += self.dictionary["next-page"]["increment"]
+
 
     def save_requests(self, directory="./DataFrames"):
 
