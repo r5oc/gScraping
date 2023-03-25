@@ -18,9 +18,6 @@ def download_default_file_settings(path_="./settings.json"):
         except ConnectionError:
             print("Make sure you are connected to the internet to download the default [settings.json]")
 
-        except ConnectTimeout:
-            print("[Connect time out]")
-
 
 def create_snapshot(path_):
     if not path.exists("./snapshots/"):
