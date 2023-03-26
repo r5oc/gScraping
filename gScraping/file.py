@@ -1,5 +1,5 @@
 from os import path, makedirs
-from requests import ConnectionError, ConnectTimeout, get
+from requests import ConnectionError, get
 import shutil
 
 
