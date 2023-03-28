@@ -11,7 +11,7 @@
 <h2> Motivo da criação </h2>
 
 <p>
-    Aprendizado e um programa pré-pronto para usar em outras tarefas como monitoramento de preço, dentre outras coisas que podem ser necessárias em outros projetos que necessitam de coletar algum tipo de dado dentro de uma página web.
+    Aprendizado, e um programa pré-pronto para se usar em tarefas como monitoramento de preço, dentre outras funcionalidades que podem ser úteis em outras ocasiões que necessitam de coletar algum tipo de dado dentro de uma página web.
 </p>
 
 <h2> Início rápido <h2>
